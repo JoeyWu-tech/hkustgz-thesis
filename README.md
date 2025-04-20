@@ -29,16 +29,7 @@ This template provides formatting guidelines and a structured layout for writing
 
 3. Edit `main.tex`, `meta.tex`, and other content files to write your thesis.
 
-## 📂 File Structure
 
-```
-hkustgz-thesis/
-├── main.tex           # Main thesis file
-├── meta.tex           # Metadata (title, author, department, etc.)
-├── chapters/          # Your thesis chapters
-├── figures/           # Figures and images
-├── bibliography.bib   # BibTeX references
-└── style/             # Custom class and style files
 ```
 
 ## ✨ Acknowledgment
