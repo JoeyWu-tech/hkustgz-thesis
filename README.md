@@ -1,38 +1,54 @@
-# HKUST Thesis
 
-[![LICENSE](https://img.shields.io/github/license/HKFoggyU/hkust-thesis)](https://www.latex-project.org/lppl/lppl-1-3c/)
-[![STARS](https://img.shields.io/github/stars/HKFoggyU/hkust-thesis)](https://github.com/HKFoggyU/hkust-thesis/stargazers)
-[![TEST](https://github.com/HKFoggyU/hkust-thesis/actions/workflows/test.yml/badge.svg)](https://github.com/HKFoggyU/hkust-thesis/actions)
-[![RELEASE](https://github.com/HKFoggyU/hkust-thesis/actions/workflows/release.yml/badge.svg)](https://github.com/HKFoggyU/hkust-thesis/releases)
+# HKUST (Guangzhou) LaTeX Thesis Template
 
-[中文说明](README_CN.md)
+This is a customized LaTeX thesis template for **The Hong Kong University of Science and Technology (Guangzhou)**, based on the excellent original work from [HKFoggyU/hkust-thesis](https://github.com/HKFoggyU/hkust-thesis).
 
-HKUST Thesis template for RPG students implemented with LaTeX3.
+## 📌 About This Template
 
-## Getting started
+This template provides formatting guidelines and a structured layout for writing MPhil or PhD theses at **HKUST (Guangzhou)**. It closely follows the typographical and stylistic standards of the original HKUST thesis template, with necessary modifications for the **Guangzhou campus**.
 
-Try this template online on [Overleaf](https://www.overleaf.com/latex/templates/hkustthesis/mstwvckmhmjg) in 1 minute! You only need to do 2 things:
+### ✅ Main Modifications
 
-1. Remember to change the `Compiler` to **`XeLaTeX`** via the top left `Menu` button, otherwise it won't compile.
-2. Download and read carefully the **[PDF documentation](https://github.com/HKFoggyU/hkust-thesis/releases/latest/download/hkustthesis.pdf)** before you edit your thesis.
+- Replaced all instances of **"The Hong Kong University of Science and Technology"** with **"The Hong Kong University of Science and Technology (Guangzhou)"**
+- Adjusted university logos and title pages to reflect HKUST (GZ) branding
+- Minor tweaks to metadata (e.g., campus name, location, etc.)
+- Maintained compatibility with XeLaTeX and standard TeX distributions
 
-Alternatively, you can download the release file and try it on your local machine.
+## 📖 How to Use
 
-## Contributions
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/hkustgz-thesis.git
+   cd hkustgz-thesis
+   ```
 
-If you find any problems or have any suggestions, please file an issue or PR.
+2. **Compile the thesis** using `latexmk`:
+   ```bash
+   latexmk -xelatex main.tex
+   ```
 
-## Disclaimer
+3. Edit `main.tex`, `meta.tex`, and other content files to write your thesis.
 
-FYTGS doesn't provide any template for thesis submission. They only emphasize that the submitted PDF file should meet the requirements in the [RPG Handbook](https://fytgs.hkust.edu.hk/academics/Academic-Regulations-and-Requirements/Handbook-for-Research-Postgraduate-Studies/guidelines-thesis-preparation).
+## 📂 File Structure
 
-This template has tried its best to follow the above requirements in the RPG Handbook and also the formatting instructions of the sample pages ([MPhil](https://fytgs.hkust.edu.hk/sites/default/files/imce/thesis_sample_page_mphil.pdf)/[PhD](https://fytgs.hkust.edu.hk/sites/default/files/imce/thesis_sample_page_phd.pdf)) provided by the RPG Handbook. However, this template takes no responsibility for any potential inconsistency.
+```
+hkustgz-thesis/
+├── main.tex           # Main thesis file
+├── meta.tex           # Metadata (title, author, department, etc.)
+├── chapters/          # Your thesis chapters
+├── figures/           # Figures and images
+├── bibliography.bib   # BibTeX references
+└── style/             # Custom class and style files
+```
 
-## License
+## ✨ Acknowledgment
 
-LaTeX Project Public License (version 1.3c)
+This template is **heavily based on** the original [hkust-thesis](https://github.com/HKFoggyU/hkust-thesis) project by [HKFoggyU](https://github.com/HKFoggyU). We sincerely thank the original author for providing a well-structured and professional LaTeX template for HKUST.
 
-## Acknowledgements
+## 📄 License
 
-This project is modified from the [`` NJUThesis ``](https://github.com/nju-lug/NJUThesis) project with the help from [NJU-LUG](https://github.com/nju-lug).
+This project inherits the license of the original work. See the [LICENSE](LICENSE) file for details.
 
+---
+
+*For any issues or suggestions, feel free to create an issue or pull request.*
