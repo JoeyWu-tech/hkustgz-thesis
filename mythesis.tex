@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HKUST(GZ) Thesis LaTeX Template
+%%
+%% This template is adapted from the original HKUST Thesis LaTeX3
+%% Template developed by HKFoggyU and contributors.
+%%
+%% Original project repository:
+%% https://github.com/HKFoggyU/hkust-thesis
+%%
+%% Contributors to original template:
+%% https://github.com/HKFoggyU/hkust-thesis/graphs/contributors
+%%
+%% This modified version is customized for
+%% The Hong Kong University of Science and Technology (Guangzhou),
+%% HKUST(GZ), to meet the formatting needs of RPG students at HKUST(GZ).
+%%
+%% You can access and use this template from:
+%% - Overleaf: aaa
+%% - GitHub:   bbb
+%%
+%% License:
+%% LaTeX Project Public License (version 1.3c)
+%%
+%% DISCLAIMER:
+%% The original and modified versions of this template are provided
+%% without any guarantee of compliance with official thesis formatting
+%% requirements. Please always refer to the latest RPG Handbook and
+%% formatting guidelines provided by HKUST(GZ).
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PassOptionsToPackage{giveninits=false}{biblatex}
+
+\documentclass[
+  %customlatinfont = windows,
+  %custombibstyle = nature,
+  displaycommittee = false,
+  % blankpage = true,
+]{hkustthesis}
+
+%% Thesis information
+\hkustsetup {
+  %% Please wrap the items with {}.
+  %% If one item is not applicable, just leave it {}.
+  %% Please do not leave any blank lines without {}.
+  info = {
+    degree        = {mphil},  %% phd / mphil
+    title         = {Sample Title},
+    keywords      = {keyword1, keyword2, keyword3},
+    author        = {Author Name},
+    Hub           = {Your Hub},
+    Thrust        = {Your Thrust},
+    program       = {[Your Program]},
+    major         = {Artificial Intelligence},
+    supervisor    = {Supervisor Name},
+    %% Co-supervisor; leave it {} if not available
+    co-supervisor = {Co-Supervisor Name},
+    submit-month  = {May 2025},      % <month year>
+    submit-date   = {28 May 2025},   % <date month year>
+    defend-date   = {23 May 2025},     % <date month year>
+    depthead      = {Head of Thrust},
+    %% reviewers only for some departments, like ECE
+    reviewer      = {Prof. AAA (Chairperson), 
+                     Prof. BBB (Supervisor),
+                     Prof. CCC (Co-Supervisor),
+                     Prof. DDD,
+                     Prof. EEE,
+                     Prof. FFF},
+    reviewerdept  = {Artificial Intelligence Thrust,
+                     AI Thrust,
+                     AI Thrust,
+                     AI Thrust,
+                     AI Thrust,
+                     Data Science and Analytics Thrust},
+    reviewerext   = {Prof. FFF (External Examiner),
+                     Department of HH\\{University of UU, at VV}},
+    % reviewerext   = {},
+    city          = {Guangzhou},
+  }
+}
+
+%% Import extra packages
+% \usepackage{indentfirst, xspace, xcolor}
+
+%% Add custom command
+% \newcommand{\todo}[1]{\textcolor{red}{TODO: #1}}
+\newcommand{\eg}{\textit{e.g.}, }
+\newcommand{\ie}{\textit{i.e.}, }
+
+%% Set the specific author in bold style.
+%% See https://tex.stackexchange.com/a/304968
+%% Need to set `author+an = {n=highlight}` for your n-th authorship in bib file.
+%% See more examples in the PDF manual.
+\renewcommand*{\mkbibnamegiven}[1]{\ifitemannotation{highlight}{\textbf{#1}}{#1}}
+\renewcommand*{\mkbibnamefamily}[1]{\ifitemannotation{highlight}{\textbf{#1}}{#1}}
+%% The bib file for `List of Publications`
+\addbibresource{mythesis_LoP.bib}
+
+%% Import bib file for bibliography
+\addbibresource{mythesis.bib}
+
+\begin{document}
+
+%% -------------------------------------------------
+%% Thesis structure: In the order of
+%% -------------------------------------------------
+%% Titlepage  -> Authorization -> Signature ->
+%% Acknowledgements ->
+%% TOC -> List of Figures -> List of Tables ->
+%% Abstract -> 
+%% -------------------------------------------------
+%% <Main body> -> 
+%% -------------------------------------------------
+%% References -> (Appendices)
+%% -------------------------------------------------
+
+\frontmatter
+\maketitle 
+
+%% Revision to the Guidelines on Thesis Preparation [w.e.f. Spring 2024/25]
+%% Abstract should be positioned immediately after the Title page
+% \input{chapters/Pre_Abstract.tex}
+\authorization
+\signaturepage
+
+\input{chapters/Pre_Acknowledgements.tex}
+
+\tableofcontents
+\listoffigures
+\listoftables
+% TODO: see \cmd{\newlistofalgorithms}
+\newlistofalgorithms % This is to maintain the same appearance
+
+%% Dedication and Preface are optional
+%\input{chapters/Pre_Dedication.tex}
+%\input{chapters/Pre_Preface.tex}
+
+%% -------------------------------------------------
+%% Main body
+%% -------------------------------------------------
+\mainmatter
+
+\input{chapters/Ch_Introduction.tex}
+\input{chapters/Ch_ExampleChapter.tex}
+\input{chapters/Ch_Conclusion.tex}
+
+%% -------------------------------------------------
+%% References
+%% -------------------------------------------------
+
+\printbibliography[heading=bibintoc,title=References]
+
+%% -------------------------------------------------
+%% Appendices
+%% -------------------------------------------------
+\appendix
+
+\input{chapters/Appendix_Publications.tex}
+\input{chapters/Appendix_Requirements.tex}
+
+\end{document}
