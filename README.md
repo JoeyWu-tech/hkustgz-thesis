@@ -9,10 +9,11 @@ This template provides formatting guidelines and a structured layout for writing
 
 ### ✅ Main Modifications
 
-- Replaced all instances of **"The Hong Kong University of Science and Technology"** with **"The Hong Kong University of Science and Technology (Guangzhou)"**
-- Adjusted university logos and title pages to reflect HKUST (GZ) branding
-- Minor tweaks to metadata (e.g., campus name, location, etc.)
-- Maintained compatibility with XeLaTeX and standard TeX distributions
+- Replaced all mentions of **"The Hong Kong University of Science and Technology"** with **"The Hong Kong University of Science and Technology (Guangzhou)"**
+- Modified the title page and front matter to reflect **HKUST (Guangzhou)** branding and formatting
+- Updated document metadata fields and terminology to align with the **organizational structure of HKUST (Guangzhou)**:
+  - **"School"** has been replaced with **"Thrust"**
+  - **"Department"** has been replaced with **"Hub"**
 
 ## 📖 How to Use
 
