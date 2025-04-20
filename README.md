@@ -30,7 +30,6 @@ This template provides formatting guidelines and a structured layout for writing
 3. Edit `main.tex`, `meta.tex`, and other content files to write your thesis.
 
 
-```
 
 ## ✨ Acknowledgment
 
